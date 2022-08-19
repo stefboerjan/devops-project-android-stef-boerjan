@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.breakingbadapp.screens.home.HomeFragment">
+
+    <data>
+        <variable
+            name="homeViewModel"
+            type="com.example.breakingbadapp.screens.home.HomeViewModel" />
+    </data>
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtQuote"
+            android:layout_width="340dp"
+            android:layout_height="107dp"
+            android:text="@{homeViewModel.property.quote}"
+
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/btnNewQuote"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Breaking Bad App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searching_for_a_cool_quote">Searching for a cool quote...</string>
+    <string name="new_quote">New quote</string>
+</resources>

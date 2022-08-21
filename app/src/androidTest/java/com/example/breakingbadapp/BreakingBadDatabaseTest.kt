@@ -5,7 +5,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.example.breakingbadapp.database.BreakingBadDatabase
 import com.example.breakingbadapp.database.BreakingBadDatabaseDao
-import com.example.breakingbadapp.database.Quote
+import com.example.breakingbadapp.database.DatabaseQuote
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -40,7 +40,7 @@ class BreakingBadDatabaseTest {
     @Test
     @Throws(Exception::class)
     fun insertAndGetQuote() {
-        val quote = Quote()
+        val quote = DatabaseQuote()
         breakingDao.insert(quote)
         val otherquote = breakingDao.getQuote(1)
         assertEquals(otherquote?.author, "Walter")

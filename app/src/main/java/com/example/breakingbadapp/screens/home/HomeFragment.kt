@@ -57,4 +57,9 @@ class HomeFragment : Fragment() {
 //        setHasOptionsMenu(true)
         return binding.root
     }
+
+    override fun onStart() {
+        super.onStart()
+        homeViewModel.getQuote()
+    }
 }

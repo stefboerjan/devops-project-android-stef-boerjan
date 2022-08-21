@@ -7,7 +7,7 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.example.breakingbadapp.network.CharacterProperty
 import com.example.breakingbadapp.network.EpisodeProperty
-import org.w3c.dom.Text
+import com.example.breakingbadapp.network.QuoteProperty
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {
@@ -40,4 +40,9 @@ fun TextView.setCharacters(item: EpisodeProperty?) {
     }
 }
 
-
+@BindingAdapter("formatQuote")
+fun TextView.setQuote(item: QuoteProperty?) {
+    item?.let {
+        text = String.format("%s - %s", item.quote, item.author)
+    }
+}

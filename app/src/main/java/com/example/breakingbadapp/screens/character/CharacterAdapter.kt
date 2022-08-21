@@ -11,7 +11,7 @@ import com.example.breakingbadapp.network.CharacterProperty
 class CharacterAdapter(private val onClickListener: OnClickListener) : ListAdapter<CharacterProperty, CharacterAdapter.ViewHolder>(CharacterDiffCallback()) {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             onClickListener.onClick(item)
         }
         holder.bind(item)
@@ -39,8 +39,8 @@ class CharacterAdapter(private val onClickListener: OnClickListener) : ListAdapt
         }
     }
 
-    class OnClickListener(val clickListener: (characterProperty: CharacterProperty) -> Unit){
-        fun onClick(characterProperty: CharacterProperty) = clickListener(characterProperty)
+    class OnClickListener(val clickListener: (character: CharacterProperty) -> Unit) {
+        fun onClick(character: CharacterProperty) = clickListener(character)
     }
 }
 
@@ -56,5 +56,3 @@ class CharacterDiffCallback : DiffUtil.ItemCallback<CharacterProperty>() {
         return oldItem == newItem
     }
 }
-
-

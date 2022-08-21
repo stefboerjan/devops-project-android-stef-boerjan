@@ -6,12 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.breakingbadapp.R
-import com.example.breakingbadapp.databinding.FragmentCharacterDetailBinding
 import com.example.breakingbadapp.databinding.FragmentEpisodeDetailBinding
-import com.example.breakingbadapp.screens.character.detail.CharacterDetailFragmentArgs
-import com.example.breakingbadapp.screens.character.detail.CharacterDetailViewModel
-import com.example.breakingbadapp.screens.character.detail.CharacterDetailViewModelFactory
 
 /**
  * A simple [Fragment] subclass.

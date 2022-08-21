@@ -18,41 +18,15 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/txtPortayed"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="44dp"
-                android:text="@{viewModel.selectedProperty.portrayed}"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.208"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toBottomOf="@+id/txtNickname" />
-
-            <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="44dp"
                 android:layout_marginTop="44dp"
-                android:text="Portayed:"
+                android:text="@string/portayed"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-            <TextView
-                android:id="@+id/txtNickname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="32dp"
-                android:text="@{viewModel.selectedProperty.nickname}"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.174"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                app:layout_constraintTop_toBottomOf="@+id/txtOccupation" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -60,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="44dp"
                 android:layout_marginTop="84dp"
-                android:text="Nickname:"
+                android:text="@string/nickname"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -80,11 +54,10 @@
                 android:id="@+id/txtName"
                 android:layout_width="219dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="84dp"
                 android:text="@{viewModel.selectedProperty.name}"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.578"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -94,33 +67,59 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="44dp"
                 android:layout_marginTop="72dp"
-                android:text="Birthday:"
+                android:text="@string/birthday"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
                 android:id="@+id/txtBirthday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="72dp"
+                android:layout_width="148dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="16dp"
                 android:text="@{viewModel.selectedProperty.birthday}"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtOccupation"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.225"
+                app:layout_constraintHorizontal_bias="0.378"
                 app:layout_constraintStart_toEndOf="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/txtNickname"
+                android:layout_width="216dp"
+                android:layout_height="29dp"
+                android:layout_marginTop="32dp"
+                android:text="@{viewModel.selectedProperty.nickname}"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtPortayed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/txtOccupation" />
+
+            <TextView
+                android:id="@+id/txtPortayed"
+                android:layout_width="224dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="24dp"
+                android:text="@{viewModel.selectedProperty.portrayed}"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.379"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/txtNickname" />
 
             <TextView
                 android:id="@+id/txtOccupation"
                 android:layout_width="238dp"
                 android:layout_height="77dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="44dp"
                 android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/txtNickname"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.138"
+                app:layout_constraintHorizontal_bias="0.272"
                 app:layout_constraintStart_toEndOf="@+id/textView4"
                 app:layout_constraintTop_toBottomOf="@+id/txtBirthday"
                 app:occupation="@{viewModel.selectedProperty}" />
@@ -131,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="44dp"
                 android:layout_marginTop="44dp"
-                android:text="Occupation:"
+                android:text="@string/occupation"
                 android:textSize="20sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView2" />

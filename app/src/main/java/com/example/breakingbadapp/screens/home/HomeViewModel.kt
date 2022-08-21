@@ -71,7 +71,7 @@ class HomeViewModel : ViewModel() {
         getQuote()
     }
 
-    private fun getQuote() {
+    fun getQuote() {
         coroutineScope.launch {
             var getPropertiesDeferred = BreakingBadApi.retrofitService.getRandomQuote()
             try {

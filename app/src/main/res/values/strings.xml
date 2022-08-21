@@ -4,4 +4,15 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="searching_for_a_cool_quote">Searching for a cool quote...</string>
     <string name="new_quote">New quote</string>
+    <string name="title">Title:</string>
+    <string name="season">Season:</string>
+    <string name="episode">Episode:</string>
+    <string name="air_date">Air date:</string>
+    <string name="characters">Characters:</string>
+    <string name="occupation">Occupation:</string>
+    <string name="birthday">Birthday:</string>
+    <string name="nickname">Nickname:</string>
+    <string name="portayed">Portayed:</string>
+    <string name="episodes">Episodes</string>
+    <string name="characters_menu">Characters</string>
 </resources>

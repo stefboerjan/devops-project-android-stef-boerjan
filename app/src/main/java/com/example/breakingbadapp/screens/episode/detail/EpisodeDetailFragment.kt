@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.breakingbadapp.databinding.FragmentEpisodeDetailBinding
@@ -26,6 +27,10 @@ class EpisodeDetailFragment : Fragment() {
         val episodeProperty = EpisodeDetailFragmentArgs.fromBundle(arguments!!).selectedProperty
         val viewModelFactory = EpisodeDetailViewModelFactory(episodeProperty, application)
         binding.viewModel = ViewModelProvider(this, viewModelFactory).get(EpisodeDetailViewModel::class.java)
+
+        //set fragment title
+        (activity as AppCompatActivity).supportActionBar?.title = episodeProperty.title
+
         return binding.root
     }
 }

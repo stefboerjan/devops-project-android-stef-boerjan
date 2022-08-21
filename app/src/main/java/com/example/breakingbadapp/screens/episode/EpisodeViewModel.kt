@@ -39,7 +39,9 @@ class EpisodeViewModel() : ViewModel() {
             try {
                 var listResult = getPropertiesDeferred.await()
                 if (listResult.isNotEmpty()) {
-                    _properties.value = listResult
+                    _properties.value = listResult.sortedBy {
+                        it.season
+                    }
                 }
                 // _status.value = "Success: ${listResult.size} Episode properties retrieved"
             } catch (t: Throwable) {

@@ -4,8 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toolbar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.example.breakingbadapp.R
 import com.example.breakingbadapp.databinding.FragmentCharacterDetailBinding
 
 /**
@@ -26,6 +31,9 @@ class CharacterDetailFragment : Fragment() {
         val characterProperty = CharacterDetailFragmentArgs.fromBundle(arguments!!).selectedProperty
         val viewModelFactory = CharacterDetailViewModelFactory(characterProperty, application)
         binding.viewModel = ViewModelProvider(this, viewModelFactory).get(CharacterDetailViewModel::class.java)
+
+        //set fragment title
+        (activity as AppCompatActivity).supportActionBar?.title = characterProperty.name
         return binding.root
     }
 }
